@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Excel ++</title>
+	<link rel="stylesheet" type="text/css" href="structure.css">
+</head>
+<body>
+	<div id="page">
+		<header>
+			<form method="post" action="traitement.php" id="recherche">
+				<p>
+					<label for="search">Recherchez</label> : <input type="search" name="search" id="search" 
+					placeholder="Recherchez moi ça !" /><br />
+				</p>
+			</form>
+		</header>
+		<div id="form">
+			<form method="post" action="traitement.php">
+		    	<p>
+		    		<!--Identification-->
+		    		<!-- autofocus sert à placer le curseur sur le champ à l'arrivée sur la page -->
+		    		<!-- required rend obligatoir le remplissange du champ en question -->
+		    		<fieldset id="connexion">
+		    			<legend>Connexion</legend>
+				    		<label for="pseudo">Pseudo </label>: <input type="text" name="pseudo" id="pseudo" /><br/>
+				    		<label for="mdp">Mot de passe </label>: <input type="text" name="mdp" id="mdp" /><br/>
+				    		<input type="submit" value="Connexion" class="boutton" />
+			    	</fieldset>
+			    	<p>Pas encore de compte ? <br/> Inscrivez-vous !</p>
+			    	<fieldset required>
+			    		<legend>Inscription</legend>
+					    		Genre :    
+				    		<input type="radio" name="genre" value="homme" id="homme" /><label for="homme">Homme</label>
+				    		<!--att "check" pour que la case soit cochée d'avance-->
+				    		<input type="radio" name="genre" value="femme" id="femme" /><label for="femme">Femme</label>
+				    		<input type="radio" name="genre" value="autre" id="autre" /><label for="autre">Autre</label><br/>
+					    	<label for="prenom"> Prenom</label> : <input type="text" name="prenom" id="prenom" /><br/>
+				    		<label for="nom"> Nom</label> : <input type="text" name="nom" id="nom" /> <br/>
+				    		<label for="email"> Mail</label> : <input type="email" name="email" id="email" /><br/>
+				    		<label for="tel"> Tel</label> : <input type="tel" name="tel" id="tel" /> <br/>
+				    		<label for="age">Poids</label> : <input type="number" name="age" id="age" /><br />
+				    		<label for="date">Date de Naissance</label> : <input type="date" name="date" id="date" /><br/>
+				    		<label for="color">Couleur fav</label> : <input type="color" name="color" id="color" /><br />
+			    		5 :=  <br/>
+			    		<input type="checkbox" name="un" id="un" /><label for="un">1 -</label>
+			    		<!--att "check" pour que la case soit cochée d'avance-->
+			    		<input type="checkbox" name="deux" id="deux" /><label for="deux">2*</label>
+			    		<input type="checkbox" name="trois" id="trois" /><label for="trois">3*1</label><br/>
+
+			    		<label for="pays">Dans quel pays habitez-vous ?</label><br />
+					       <select name="pays" id="pays">
+					       	<optgroup label="Europe">
+					           <option value="france">France</option>
+					           <option value="espagne">Espagne</option>
+					           <option value="italie">Italie</option>
+					           <option value="royaume-uni">Royaume-Uni</option>
+					        </optgroup>
+					        <optgroup label="Amerique du Nord">
+					           <option value="canada">Canada</option>
+					           <option value="etats-unis">États-Unis</option>
+					        </optgroup>
+					        <optgroup label="Asie">
+					           <option value="chine">Chine</option>
+					           <option value="japon">Japon</option>
+					        </optgroup>
+					       </select><br/>
+					       <input type="submit" value="S'inscrire" class="boutton"/>
+				    </fieldset>
+
+		    	</p>
+			</form>
+			<form method="post" action="traitement.php">
+				<p>
+					<label for="avis">Votre avis nous interesse !</label><br/>
+					<textarea type="text" name="avis" id="avis" rows="20" cols="50" placeholder="Je pense que..."></textarea>
+				</p>
+			</form>
+		</div>
+		<table>
+			<caption>Matrice de taille 4x4</caption>
+			<thead>
+	 	  <tr>
+	 	  	<th>C1</th>
+	 	  	<th>C1</th>
+	 	  	<th>C2</th>
+	 	  	<th>C3</th>
+	 	  </tr>
+	 	  </thead>
+
+	 	  <tfoot>
+	 	  	<tr>
+	 	  		<td>C'est</td>
+	 	  		<td>ça</td>
+	 	  		<td>mon</td>
+	 	  		<td>Gars!!!!!!!</td>
+	 	  	</tr>
+	 	  </tfoot>
+
+	 	  <tbody>
+		 	  <tr>
+		 	  	<td>L2</td>
+		 	  	<td>L2-C1</td>
+		 	  	<td>L2-C2</td>
+		 	  	<td>L2-C2</td>
+		 	  </tr>
+		 	  <tr>
+		 	  	<td>L3-C0</td>
+		 	  	<td>L3-C1</td>
+		 	  	<td>L3-C2</td>
+		 	  	<td>L3-C3</td>
+		 	  </tr>
+		 	  <tr>
+		 	  	<td>L4-C0</td>
+		 	  	<td>L4-C1</td>
+		 	  	<td>L4-C3</td>
+		 	  	<td>L2-C3</td>
+		 	  </tr>
+		 	  <tr>
+		 	  	<td colspan="2"></td> <!--Permet de fusionner deux cellules par la col-->
+		 	  	<td colspan="2"></td>
+		 	  </tr>
+		 	  <tr>
+		 	  	<td rowspan="2">Att</td> <!--Permet de fusionner deux cellules par la ligne-->
+		 	  	<td colspan="2">Attr1</td>
+		 	  	<td>Attr2</td>
+		 	  </tr>
+		 	  <tr>
+		 	  	<td>At</td> <!-- Il y a trois case car l'une est fusionnée avec la colonne du dessus et existe sans la definir-->
+		 	  	<td>At2</td>
+		 	  	<td>At3</td>
+		 	  </tr>
+		 	  <tr>
+		 	  	<td>Ar</td>
+		 	  	<td>Ar1</td>
+		 	  	<td>Ar2</td>
+		 	  	<td>Ar3</td>
+		 	  </tr>
+		 	</tbody>
+		</table>
+	</div>
+</body>
+</html>
+
+<!-- Un formulaire est une zone interactive de la page, dans laquelle vos visiteurs peuvent saisir des informations.
+
+On délimite un formulaire avec la balise<form>à laquelle il faut ajouter deux attributs :method(mode d'envoi des données) etaction(page vers laquelle le visiteur sera redirigé après envoi du formulaire et qui traitera les informations).
+
+Une grande partie des éléments du formulaire peut s'insérer avec la balise<input />. La valeur de son attributtypepermet d'indiquer quel type de champ doit être inséré :
+
+text: zone de texte ;
+
+password: zone de texte pour mot de passe ;
+
+tel: numéro de téléphone ;
+
+checkbox: case à cocher ;
+
+etc.
+
+La balise<label>permet d'écrire un libellé. On l'associe à un champ de formulaire avec l'attributfor, qui doit avoir la même valeur que l'iddu champ de formulaire.
+
+On peut rendre un champ obligatoire avec l'attributrequired, faire en sorte qu'il soit sélectionné par défaut avecautofocus, donner une indication dans le champ avecplaceholder…
+
+Pour récupérer ce que les visiteurs ont saisi, le langage HTML ne suffit pas. Il faut utiliser un langage « serveur » comme PHP… Si vous voulez aller plus loin, il va donc falloir apprendre un nouveau langage ! -->

@@ -1,0 +1,67 @@
+@font-face {
+	font-family: 'pol_titre';
+	src: url('police/Crackvetica.ttf');
+}
+@font-face{
+	font-family:'choix';
+	src : url('police/Inkland.ttf');
+}
+@font-face{
+	font-family:'Shut_Down';
+	src : url('police/Shut_Down.ttf');
+	src : url('police/Destroy_x.ttf');
+}
+@font-face{
+	font-family:'Destroy_x';
+	src : url('police/Destroy_x.ttf');
+}
+
+.titre /* Les paragraphes et les mots assez inmportants sont en bleu*/
+{ 
+	font-family: 'pol_titre', Arial, serif;
+	text-align: center;
+	color: #b20303;
+}
+
+#histoire, #avant, #credits /* Si la balise utilisée est 'id' et pas 'class' alors on utilise la methode '#' et pas '.'*/
+{ 
+	font-size:xx-large; /* Il vaut mieux mettre les tailles en format relatif(mots) plutôt qu'absolu (pixel, px) car sinon c'est la merde*/
+	color: #1777ed;
+}
+
+p + em  /* p em Prends le pas sur p + em*/
+{
+	color: black;
+	font-size: medium;
+}
+
+#choix
+{
+	font-size: xx-large;
+	font-family: 'choix'; /*Pour ne placçer qu'un id il faut utiliser <a></a>*/
+	font-style: bold; /* gras */
+}
+
+
+body
+{
+    /*background-image: url('img/fond_d.png');
+    background-position: top;
+    background-attachment: : repeat;*/
+    background: white;
+    color: black;
+}
+
+h2:hover
+{
+	font-family: 'Destroy_x';
+}
+#monde
+{
+	font-family: 'Destroy_x';
+}
+header{background-color: #2fd6a4}
+
+#img_en_tete {float: left}
+
+#titre_site	{text-align: center;}

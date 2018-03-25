@@ -1,0 +1,30 @@
+.bleu /* Les paragraphes et les mots assez inmportants sont en bleu*/
+{ 
+	color:blue;  /* La propiété de la methode est la couleur et sa valeur appliquée le bleu*/
+	font-size: medium;
+}
+
+strong{
+	color: red;
+	font-size: small;
+}
+#histoire, #avant, #credits /* Si la balise utilisée est 'id' et pas 'class' alors on utilise la methode '#' et pas '.'*/
+{ 
+	font-size:xx-large; /* Il vaut mieux mettre les tailles en format relatif(mots) plutôt qu'absolu (pixel, px) car cinon c'est la merde*/
+}
+
+p + em
+{
+	color: black;
+	font-size: medium;
+}
+
+p em /* Prends le pas sur p + em*/
+{
+	color: red;
+	font-size: 30px;
+}
+
+a*[href*="CSS"]{
+	font-size: x-large;
+}

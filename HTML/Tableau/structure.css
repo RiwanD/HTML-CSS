@@ -1,0 +1,68 @@
+#page
+{
+	display: flex;
+	flex-direction: row;
+}
+
+header
+{
+	top: 0;
+	height: 10%;
+	width: 100%;
+	background: grey;
+	position: fixed;
+	text-align: center;
+}
+
+td, th
+{
+	border: 1px black solid;
+	margin: 20px;
+	text-align: center;
+}
+
+table
+{
+	border-collapse: collapse;
+	margin: auto;
+}
+
+caption
+{
+	caption-side: top;
+}
+
+#form 
+{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	margin-top: 8%;
+}
+
+input
+{
+	vertical-align: top;
+	margin: auto;
+	padding: auto;
+
+}
+
+input:focus
+{
+	border: 2px black solid;
+}
+
+:invalide
+{
+	border: 2px red solid;
+}
+:required
+{
+	border: 2px black solid;
+}
+
+.boutton
+{
+	margin: auto;
+}

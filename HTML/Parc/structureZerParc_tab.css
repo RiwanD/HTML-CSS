@@ -1,0 +1,209 @@
+@font-face
+{
+	font-family: 'uni'; src: url(Road_Rage.otf);
+}
+
+body
+{
+	background-image: linear-gradient( to bottom, #2ed6a4 0%,#6fd6b7 50%,#FFFFFF 100%);	
+}
+
+
+header{
+	background-color: #2ed6a4;
+	width: 100%;
+    top:0;
+    border: 2px black solid;
+    text-align: center;
+    height: 100px;
+}
+/*si un bloc est positionné en absolu dans un autre bloc lui-même positionné en absolu, fixe ou relatif, 
+alors il se positionne à l'intérieur de ce bloc.*/
+
+
+#page
+{
+	display: flex;
+	flex-direction: column;
+}
+
+#corps
+{
+	display: flex;
+	flex-direction: row;
+}
+
+#el_header
+{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;			/*align items permet l'alignement sur l'axe secondaire (ici vertical) selon, center, flex-start, flex-end...*/
+    padding-left: 20px;  /*padding marge inetrieur, margin marge exterieur*/
+    padding-right: 20px;
+}
+
+	#boutton
+	{
+		order: 1;
+		align-self: flex-end; /*permet d'allifner un seul bolck*/
+
+	}
+
+
+	h1
+	{
+
+		order: 2;
+		flex: 1; /*Condencé de flex-grow, flex-shrink; flex-basis*/
+	}
+
+	h2
+	{
+		order: 3;
+	}
+
+
+#conteneur
+{
+    display: flex; /*Permet l'utilisation de Flexbox*/
+    flex-direction: column;
+    height: 100%;
+	width: 15%;
+}
+
+
+	.element01
+	{
+		height: 70px;
+		
+		color: black;
+		border: 2px solid red;
+		background-image: radial-gradient(ellipse at center, #9b4141 0%,#ff0000 100%);
+		/* sytaxe formelle : radial-gradient(   [ circle || <length> ] [ at <position> ]? ,
+	                 | [ ellipse || [ <length>  |  <percentage>  ]{2}] [ at  <position>  ]? ,
+	                 | [ [ circle | ellipse ] || <extent-keyword> ] [ at  <position>  ]? ,
+	                 | at  <position>  ,
+	                 <color-stop> [ , <color-stop> ]+ )*/
+		/*background-color: #ff0000;*/
+		border: 2px black solid;
+		text-align: center;
+
+	}
+
+	.element02
+	{
+		height: 70px;
+		
+		color: black;
+		border: 2px solid black;
+		background-color: #d82d2d;
+		border: 2px black solid;
+		text-align: center;
+
+	}
+
+	#arrond
+	{
+		display: flex;
+		flex-wrap: wrap;
+	}
+		.arr
+		{
+			width: 47%;
+			height: 50%;
+			color: red;
+			background-color: #bc4040;
+			border: 2px black solid;
+			text-align: center;
+		}
+
+
+#en-corps
+{
+	background-image: linear-gradient( to bottom, #FFFFFF 0%,#5fe8e8 100%);	
+	padding-left: 6%;
+	padding-right: 6%;
+	border: 2px linear-gradient( to bottom, #FFFFFF 0%,#5fe8e8 100%) solid;
+	margin: auto;
+	text-align: center;
+
+
+}
+	#en-corps h1
+	{
+		font-family: 'uni', arial, serif;
+	}
+
+	.arrondissement
+	{
+		border: 2px black solid;
+		background-color: #e03535;
+	}
+
+	td, th
+	{
+		border: 1px black solid;
+		padding: 10px;
+		text-align: center;
+	}
+
+	table
+	{
+		border-collapse: collapse;
+		margin: auto;
+		size: large;
+	}
+
+footer
+{
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	margin-bottom: 0;
+	border: 2px #e03a3a solid;
+}
+
+	#Contact
+	{
+		width: 50%;
+		background-image: linear-gradient( to bottom, #9b4141 0%,#8d5bd3 50%,#2ed6a4 100%);
+
+
+		/*<color-stop-list> =
+	  	[ <linear-color-stop> , <linear-color-hint>? ]# , <linear-color-stop>
+		<linear-color-stop> = <color> && <color-stop-length>
+		<linear-color-hint> = <length> | <percentage>
+		<color-stop-length> = [ <length> | <percentage> ]{1,2}*/
+		text-align: center;
+	}
+
+	#mairie
+	{	
+		
+		padding-top: 3%;
+		color: #760001;
+		width: 50%;
+	    text-align: center;
+	    background-image: radial-gradient(ellipse at center, #2ed6a4 0%,#ff0000 100%);
+	}
+
+/*Le type de bordure : là, vous avez le choix. Votre bordure peut être un simple trait, ou des pointillés, ou encore des tirets, etc. Voici les différentes valeurs disponibles :
+
+none: pas de bordure (par défaut) ;
+
+solid: un trait simple ;
+
+dotted: pointillés ;
+
+dashed: tirets ;
+
+double: bordure double ;
+
+groove: en relief ;
+
+ridge: autre effet relief ;
+
+inset: effet 3D global enfoncé ;
+
+outset: effet 3D global surélevé.*/
